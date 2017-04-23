@@ -13,3 +13,8 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const ROUTES: Routes = [
+  {
+    path: '',
+    children: []
+  }]
