@@ -10,6 +10,6 @@ import { counterReducer } from './counter.reducer';
 export const rootReducer = composeReducers(
     defaultFormReducer(),
     combineReducers({
-        counter: counterReducer('patients'),
+        counter: counterReducer(),
         router: routerReducer,
     }));

@@ -16,6 +16,7 @@ import { rootReducer, IAppState, INITIAL_STATE } from './reducers';
 import { NgReduxRouterModule, NgReduxRouter } from '@angular-redux/router';
 import { provideReduxForms } from '@angular-redux/form';
 import { AppActions } from './actions';
+import { CounterComponent } from './counter/counter.component';
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
@@ -24,6 +25,7 @@ const APP_PROVIDERS = [
   bootstrap: [AppComponent],
   declarations: [
     AppComponent,
+    CounterComponent,
   ],
   imports: [ // import Angular's modules
     BrowserModule,

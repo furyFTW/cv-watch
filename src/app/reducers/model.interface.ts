@@ -1,18 +1,17 @@
-export interface Counter {
-    cout: number;
-}
+// export interface Counter {
+//     count: number;
+// }
 
-export interface CounterState extends Array<Counter> { }
-
+export type CounterState = number;
 export interface IAppState {
-    counter: Counter[];
+    counter: number;
     router?: any
 }
 
-export const INITIAL_COUNTER_STATE: CounterState = [];
+export const INITIAL_COUNTER_STATE = 0;
 
 export const INITIAL_STATE: IAppState = {
-    counter: []
+    counter: 0
 };
 
 export interface Action {

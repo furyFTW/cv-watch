@@ -2,17 +2,16 @@ import { AppActions } from '../actions';
 import { CounterState, Action, INITIAL_COUNTER_STATE } from './model.interface';
 
 
-export function counterReducer(key) {
+export function counterReducer() {
     return function (state: CounterState = INITIAL_COUNTER_STATE, action: Action): CounterState {
-        if (action.type === AppActions.REHYDRATE) {
-            return 0 || state
-        }
+        console.log(state, action)
         switch (action.type) {
             case AppActions.REHYDRATE:
-                return 0 || state;
+                return INITIAL_COUNTER_STATE;
             case AppActions.ADD_COUNTER:
-                let number = state.slice();
-                return number;
+                return state + 1;
+            case AppActions.REMOVE_COUNTER:
+                return state - 1;
             default:
                 return state;
         }
